@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Configuración de tema para Tailwind v4 */
+@theme {
+  --color-bmw-blue: #0066B1;
+  --color-bmw-light-blue: #1C69D4;
+  --color-bmw-dark-blue: #003366;
+}
+
+/* Estilos personalizados */
+.audio-player {
+  @apply bg-white rounded-lg shadow-md p-4;
+}
+
+.dark {
+  @apply bg-gray-800;
+}
+
+.audio-player {
+  @apply bg-gray-800;
+}
+
+.audio-progress {
+  @apply h-1 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.dark .audio-progress {
+  @apply bg-gray-700;
+}
+
+.audio-progress-bar {
+  @apply h-full bg-blue-600 transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md transition-colors;
+}
+
+.dark .btn-secondary {
+  @apply bg-gray-700 hover:bg-gray-600 text-white;
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
